@@ -1,15 +1,15 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
-import Index from "../pages/index"
+import Home from "../pages/Home";
 
-const router = (props) => {
+const Router = (props) => {
   return (
-    <>
-      <Router path={"/"} component={Index} />
-    </>
+    <Switch>
+      <Route path={"/"} component={Home} />
+    </Switch>
   )
 }
 
-export default router
+export default Router
 
