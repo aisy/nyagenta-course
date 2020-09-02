@@ -1,8 +1,9 @@
 import React from 'react'
 
 import LayoutHome from "../layouts/Home";
-import Banner from '../components/Banner';
-import Section from '../components/Section';
+import Banner from '../components/Home/Banner';
+import Section from '../components/commons/Section';
+import ListCourse from '../components/Home/ListCourse';
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
         <Section
           title={"Kategori Course"}
         >
-          <p>Ulalala</p>
+          <ListCourse />
         </Section>
       </LayoutHome>
     </>
