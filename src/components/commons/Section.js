@@ -19,9 +19,9 @@ const Section = ({ title, caption, children }) => {
     <>
       <SectionContainer>
         <TitleContainer>
-          <Title>{title ? title : "Title Section"}</Title>
+          <Title>{title ? title : null}</Title>
           <Paragraph>
-            {caption ? caption : "Caption section"}
+            {caption ? caption : null}
           </Paragraph>
         </TitleContainer>
 
