@@ -12,11 +12,11 @@ const CardListCourse = ({ title, description, img, width }) => {
         hoverable
         style={{ width: 290, marginBottom: 20 }}
         cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-        actions={[
-          <Link to={"/"}>
-            <Button type={"primary"} shape={"round"}>Lihat semua</Button>
-          </Link>
-        ]}
+      // actions={[
+      //   <Link to={"/"}>
+      //     <Button type={"primary"} shape={"round"}>Lihat semua</Button>
+      //   </Link>
+      // ]}
       >
         <Meta title="Europe Street beat" description="www.instagram.com" />
       </Card>
