@@ -1,19 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { BackTop } from 'antd';
 
 import LayoutHome from "../layouts/Home";
 import Banner from '../components/Home/Banner';
 import Section from '../components/commons/Section';
 import ListCourse from '../components/Home/ListCourse';
+import ListReason from '../components/Home/ListReason';
+
 
 const HomePage = () => {
   return (
     <>
       <LayoutHome>
+        <BackTop />
         <Banner
           img={"https://www.w3schools.com/howto/photographer.jpg"}
-          title={"Tingkatkan Kemampuan dan Kompetensi Diri"}
-          caption={"Akses beragam course di bidang pemrograman, marketing, bisnis, hingga personal development!"}
+          title={"Level up diri anda!"}
+          caption={"Akses berbagai course di bidang IT, Desain, hingga personal development!"}
         />
+        <Section>
+          <ListReason />
+        </Section>
         <Section
           title={"Kategori Course"}
         >
