@@ -8,9 +8,10 @@ const SectionContainer = styled.div`
 
 const TitleContainer = styled.div`
   text-align: center;
+  margin-bottom: 80px;
 `;
 
-const Section = ({ title, caption }, props) => {
+const Section = ({ title, caption, children }) => {
 
   const { Title, Paragraph } = Typography;
 
@@ -18,14 +19,14 @@ const Section = ({ title, caption }, props) => {
     <>
       <SectionContainer>
         <TitleContainer>
-          <Title>{title ? title : "Title Section"}</Title>
+          <Title>{title ? title : null}</Title>
           <Paragraph>
-            {caption ? caption : "Caption section"}
+            {caption ? caption : null}
           </Paragraph>
         </TitleContainer>
 
         <div>
-          {props.children}
+          {children}
         </div>
       </SectionContainer>
     </>

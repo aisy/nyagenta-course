@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Button } from 'antd';
+import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -43,7 +43,7 @@ const Navbar = ({
   textColor,
 }) => {
 
-  const { Search } = Input
+  // const { Search } = Input
 
   // render
   return (
