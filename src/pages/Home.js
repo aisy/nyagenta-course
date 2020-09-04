@@ -7,7 +7,6 @@ import Section from '../components/commons/Section';
 import ListCourse from '../components/Home/ListCourse';
 import ListReason from '../components/Home/ListReason';
 
-
 const HomePage = () => {
   return (
     <>
@@ -22,7 +21,12 @@ const HomePage = () => {
           <ListReason />
         </Section>
         <Section
-          title={"Kategori Course"}
+          title={"Course Favorit"}
+        >
+          <ListCourse />
+        </Section>
+        <Section
+          title={"Course Favorit"}
         >
           <ListCourse />
         </Section>
