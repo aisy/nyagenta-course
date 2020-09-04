@@ -7,8 +7,10 @@ import Course from '../pages/Courses';
 const Router = (props) => {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/courses"} component={Course} />
+      <Route path={"/"} exact component={Home} />
+
+      {/* Courses */}
+      <Route path={"/courses"} exact component={Course} />
     </Switch>
   )
 }
