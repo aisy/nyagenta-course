@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 // style
@@ -55,22 +55,40 @@ const Navbar = ({
         <nav>
           <MenuHeader>
             <ListMenu>
-              <Link to={"/"}>Home</Link>
+              <NavLink
+                style={{ color: "black" }}
+                activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
+                exact
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </ListMenu>
             <ListMenu>
-              <Link to={"/courses"}>Course</Link>
+              <NavLink
+                style={{ color: "black" }}
+                activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
+                exact
+                to={"/courses"}
+              >
+                Course
+              </NavLink>
             </ListMenu>
             <ListMenu>
-              <Link to={"/"}>Bootcamp</Link>
-            </ListMenu>
-            <ListMenu>
-              <Link to={"/"}>Blog</Link>
+              <NavLink
+                style={{ color: "black" }}
+                activeStyle={{ color: "d228e9" }}
+                exact
+                to={"/blog"}
+              >
+                Blog
+              </NavLink>
             </ListMenu>
           </MenuHeader>
         </nav>
-        <Link to={"/"} style={{ marginLeft: 20 }}>
+        <NavLink to={"/login"} style={{ marginLeft: 20 }}>
           <Button type={"primary"} shape={"round"}>Sign In</Button>
-        </Link>
+        </NavLink>
       </Header>
     </>
   )
