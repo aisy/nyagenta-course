@@ -1,7 +1,7 @@
 import React from 'react';
 import { BackTop } from 'antd';
 
-import LayoutHome from "../layouts/Home";
+import LayoutHome from "../layouts/Default";
 import Banner from '../components/Home/Banner';
 import Section from '../components/commons/Section';
 import ListCourse from '../components/Home/ListCourse';
