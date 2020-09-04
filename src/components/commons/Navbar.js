@@ -58,13 +58,13 @@ const Navbar = ({
               <Link to={"/"}>Home</Link>
             </ListMenu>
             <ListMenu>
-              <Link>Course</Link>
+              <Link to={"/courses"}>Course</Link>
             </ListMenu>
             <ListMenu>
-              <Link>Bootcamp</Link>
+              <Link to={"/"}>Bootcamp</Link>
             </ListMenu>
             <ListMenu>
-              <Link>Blog</Link>
+              <Link to={"/"}>Blog</Link>
             </ListMenu>
           </MenuHeader>
         </nav>

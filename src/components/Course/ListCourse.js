@@ -1,8 +1,7 @@
 import React from 'react';
-import { Row, Col, Button } from 'antd';
+import { Row, Col } from 'antd';
 
 import CardListCourse from '../Home/CardListCourse';
-import { Link } from 'react-router-dom';
 
 const ListCourse = ({ data }) => {
 
@@ -35,9 +34,7 @@ const ListCourse = ({ data }) => {
         </Col>
       </Row>
 
-      <Link to={"/courses"} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Button shape={"round"} size="large" type={"primary"}>Lihat semua Course</Button>
-      </Link>
+
     </div>
   )
 }
