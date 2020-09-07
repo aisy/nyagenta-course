@@ -30,7 +30,7 @@ const Login = () => {
             />
           </Col>
           <Col span={12}>
-            <Card bordered={false} style={{ width: 450, boxShadow: "rgba(0, 0, 0, 0.05) 0px 3px 50px 0px" }}>
+            <Card bordered={false} style={{ width: 450, boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)" }}>
               <div style={{ textAlign: "center" }}>
                 <Title level={3}>Level Up!</Title>
                 <Paragraph>Dapatkan akses berbagai course</Paragraph>
