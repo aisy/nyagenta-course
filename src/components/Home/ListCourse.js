@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Button } from 'antd';
 
-import CardListCourse from '../Home/CardListCourse';
+import CardListCourse from '../../components/commons/CardListCourse';
 import { Link } from 'react-router-dom';
 
 const ListCourse = ({ data }) => {
