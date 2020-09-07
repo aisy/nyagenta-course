@@ -35,9 +35,11 @@ const ListCourse = ({ data }) => {
         </Col>
       </Row>
 
-      <Link to={"/courses"} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Button shape={"round"} size="large" type={"primary"}>Lihat semua Course</Button>
-      </Link>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Link to={"/courses"} >
+          <Button shape={"round"} size="large" type={"primary"}>Lihat semua Course</Button>
+        </Link>
+      </div>
     </div>
   )
 }
