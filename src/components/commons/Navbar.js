@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Space } from 'antd';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -21,12 +21,6 @@ const HeaderText = styled.p`
   font-size: 20px;
   font-weight: 600;
   margin-right: auto;
-  margin-bottom: 0;
-`;
-
-const MenuHeader = styled.ul`
-  list-style: none;
-  margin-top: 0;
   margin-bottom: 0;
 `;
 
@@ -52,43 +46,41 @@ const Navbar = ({
         <HeaderText>
           {title ? title : "Title"}
         </HeaderText>
-        <nav>
-          <MenuHeader>
-            <ListMenu>
-              <NavLink
-                style={{ color: "black" }}
-                activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
-                exact
-                to={"/"}
-              >
-                Home
+        <Space size={"small"}>
+          <ListMenu>
+            <NavLink
+              style={{ color: "black" }}
+              activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
+              exact
+              to={"/"}
+            >
+              Home
               </NavLink>
-            </ListMenu>
-            <ListMenu>
-              <NavLink
-                style={{ color: "black" }}
-                activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
-                exact
-                to={"/courses"}
-              >
-                Course
+          </ListMenu>
+          <ListMenu>
+            <NavLink
+              style={{ color: "black" }}
+              activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
+              exact
+              to={"/courses"}
+            >
+              Course
               </NavLink>
-            </ListMenu>
-            <ListMenu>
-              <NavLink
-                style={{ color: "black" }}
-                activeStyle={{ color: "d228e9" }}
-                exact
-                to={"/blog"}
-              >
-                Blog
+          </ListMenu>
+          <ListMenu>
+            <NavLink
+              style={{ color: "black" }}
+              activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
+              exact
+              to={"/blog"}
+            >
+              Blog
               </NavLink>
-            </ListMenu>
-          </MenuHeader>
-        </nav>
-        <NavLink to={"/login"} style={{ marginLeft: 20 }}>
-          <Button type={"primary"} shape={"round"}>Sign In</Button>
-        </NavLink>
+          </ListMenu>
+          <NavLink to={"/login"} style={{ marginLeft: 20 }}>
+            <Button type={"primary"} shape={"round"}>Sign In</Button>
+          </NavLink>
+        </Space>
       </Header>
     </>
   )

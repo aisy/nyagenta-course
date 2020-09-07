@@ -25,11 +25,6 @@ const HomePage = () => {
         >
           <ListCourse />
         </Section>
-        <Section
-          title={"Course Favorit"}
-        >
-          <ListCourse />
-        </Section>
       </LayoutHome>
     </>
   )

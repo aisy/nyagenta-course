@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Row, Col, Pagination } from 'antd';
 import styled from 'styled-components';
 
-import CardListCourse from '../Home/CardListCourse';
+import CardListCourse from '../../components/commons/CardListCourse';
+import SkeletonCard from './SkeletonCourseGroup';
 
 const PaginationCourse = styled.div`
   margin-top: 30px;
@@ -11,39 +12,35 @@ const PaginationCourse = styled.div`
   justify-content: center;
 `;
 
-const ListCourse = ({ data }) => {
+const ListCourse = ({ data, loading }) => {
+
+  useEffect(() => {
+    console.log(data)
+  }, [data, loading]);
 
   return (
     <div>
       <Row gutter={16}>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
-        <Col className={"gutter-row"} span={6}>
-          <CardListCourse />
-        </Col>
+        {
+          loading ?
+            <SkeletonCard />
+            :
+            data.map(items => (
+              <Col className={"gutter-row"} span={6}>
+                <CardListCourse
+                  title={items.title}
+                  description={items.releaseYear}
+                />
+              </Col>
+            ))
+        }
       </Row>
 
       <PaginationCourse>
-        <Pagination defaultCurrent={1} total={50} />
+        <Pagination
+          defaultCurrent={1}
+          total={10}
+        />
       </PaginationCourse>
     </div>
   )
