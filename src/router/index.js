@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Course from '../pages/Courses/';
+import CourseDetail from '../pages/Courses/CourseDetail/';
 import Blog from '../pages/Blog';
 import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
@@ -16,7 +17,8 @@ const Router = (props) => {
       <Route path={"/register"} component={Register} />
 
       {/* Courses */}
-      <Route path={"/courses"} exact component={Course} />
+      <Route path={"/course"} exact component={Course} />
+      <Route path={"/course/:id"} exact component={CourseDetail} />
 
       {/* Blog */}
       <Route path={"/blog"} exact component={Blog} />
