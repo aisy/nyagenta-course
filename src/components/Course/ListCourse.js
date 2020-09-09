@@ -30,6 +30,7 @@ const ListCourse = ({ data, loading }) => {
                 <CardListCourse
                   title={items.title}
                   description={items.releaseYear}
+                  link={`course/${items.id}`}
                 />
               </Col>
             ))

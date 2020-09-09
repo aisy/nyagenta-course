@@ -62,7 +62,7 @@ const Navbar = ({
               style={{ color: "black" }}
               activeStyle={{ color: "#d228e9", fontWeight: "bold" }}
               exact
-              to={"/courses"}
+              to={"/course"}
             >
               Course
               </NavLink>
