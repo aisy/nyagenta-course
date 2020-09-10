@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Typography, Row, Col, Skeleton, Divider, Button, Space, Tag } from 'antd';
+import { Typography, Row, Col, Skeleton, Divider, Button, Space, Tag, Modal } from 'antd';
 import { SolutionOutlined, PlayCircleOutlined, HistoryOutlined, GlobalOutlined } from '@ant-design/icons';
 
 const BackgroundImage = styled.div`
@@ -40,6 +40,11 @@ const styles = {
 const Banner = ({ data }) => {
 
   const { Title, Paragraph } = Typography;
+  const [modal, setModal] = useState(false);
+
+  const modalClose = () => {
+    setModal(false);
+  }
 
   return (
     <>
@@ -60,7 +65,8 @@ const Banner = ({ data }) => {
               Javascript basic
             </Title>
             <Paragraph style={styles.caption}>
-              Reprehenderit elit elit do aute ullamco exercitation voluptate. Excepteur tempor minim culpa nulla labore ullamco.
+              Reprehenderit elit elit do aute ullamco exercitation voluptate.
+              Excepteur tempor minim culpa nulla labore ullamco.
             </Paragraph>
 
             {/* Auth */}
@@ -87,6 +93,7 @@ const Banner = ({ data }) => {
                 ghost
                 size={"large"}
                 shape={"round"}
+                onClick={() => setModal(true)}
                 icon={<PlayCircleOutlined />}
               >
                 Preview Video
@@ -94,6 +101,18 @@ const Banner = ({ data }) => {
             </Space>
           </Col>
         </Row>
+
+        {/* Modal */}
+        <Modal
+          title="Basic Modal"
+          visible={modal}
+          onCancel={modalClose}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
+
       </BackgroundImage>
     </>
   )
