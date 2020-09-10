@@ -6,6 +6,13 @@ import Layout from '../../../layouts/Default';
 import Banner from '../../../components/Course/CourseDetail/Banner';
 import Section from '../../../components/commons/Section';
 
+const styles = {
+  panel: {
+    fontSize: 18,
+    fontWeight: 700
+  }
+}
+
 const CourseDetail = () => {
 
   const { Paragraph, Title } = Typography;
@@ -40,19 +47,19 @@ const CourseDetail = () => {
         <Section title={"Konten Course"}>
           <div style={{ padding: "0px 150px" }}>
             <Collapse>
-              <Collapse.Panel header={"Trailer"} style={{ fontSize: 18, fontWeight: 700 }} extra={"1 Konten"}>
+              <Collapse.Panel header={"Trailer"} style={styles.panel} extra={"1 Konten"}>
                 <Space size={730}>
                   <Space size={15}>
                     <PlayCircleTwoTone color={"#E040FB"} />
                     <Typography.Paragraph style={{ marginBottom: 0 }} strong>
                       Trailer
-                  </Typography.Paragraph>
+                    </Typography.Paragraph>
                   </Space>
                   <Button type={"primary"}>Mulai</Button>
                 </Space>
               </Collapse.Panel>
 
-              <Collapse.Panel header={"Pengenalan"}>
+              <Collapse.Panel header={"Pengenalan"} style={styles.panel}>
                 asdasdasdasdasdasd
               </Collapse.Panel>
             </Collapse>
